@@ -17,18 +17,6 @@ if name:
 age = st.slider("Select your age:", 1, 100, 25)
 st.write(f"You are {age} years old.")
 
-# Generate random data for a chart
-st.write("Here's a random line chart based on your age:")
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3) * age,  # Scale the data by age
-    columns=["A", "B", "C"]
-)
-st.line_chart(chart_data)
-
-# Checkbox to toggle a message
-if st.checkbox("Click to show a surprise message"):
-    st.write("🎉 You found the hidden surprise!")
-
 # Dropdown menu
 option = st.selectbox(
     "Which programming language do you like?",
